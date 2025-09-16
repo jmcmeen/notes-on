@@ -3,6 +3,7 @@ A collection of notes on various computer science and mathematics concepts
 
 ## Notes
 
-- [C# Introductory Notes](notes/csharp_introductory_notes.md)
+- [C# Intro Notes](notes/csharp_intro_notes.md)
+- [C++ Intro Notes](notes/cpp_intro_notes.md)
 - [HuggingFace](notes/huggingface.md)
-- [Python Introductory Notes](notes/python_introductory_notes.md)
+- [Python Intro Notes](notes/python_intro_notes.md)
