@@ -1,5 +1,5 @@
 # notes-on
-A collection of notes on various computer science and mathematics concepts
+A collection of notes on various computer science, mathematics, and science concepts that I find interesting!
 
 ## Notes
 
