@@ -1,4 +1,4 @@
-# From Zero to Hero with HuggingFace: The Ultimate AI Wingman
+# Introduction to HuggingFace 
 
 ---
 
