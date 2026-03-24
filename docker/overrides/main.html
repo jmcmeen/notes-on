@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+{{ super() }}
+
+{% if page and page.file and page.file.src_path.startswith("notes/") %}
+<div class="download-bar">
+  <span class="download-bar__label">Download this note:</span>
+  <a class="download-bar__btn download-bar__btn--md"
+     href="/api/download/{{ page.file.name }}?format=md" title="Download Markdown">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    MD
+  </a>
+  <a class="download-bar__btn download-bar__btn--html"
+     href="/api/download/{{ page.file.name }}?format=html" title="Download HTML">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    HTML
+  </a>
+  <a class="download-bar__btn download-bar__btn--pdf"
+     href="/api/download/{{ page.file.name }}?format=pdf" title="Download PDF">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+    PDF
+  </a>
+</div>
+{% endif %}
+
+{% if page and page.is_homepage %}
+<div class="download-bundle">
+  <h3>Download All Notes</h3>
+  <p>Download the entire collection as a ZIP archive:</p>
+  <div class="download-bundle__buttons">
+    <a class="download-bar__btn download-bar__btn--md" href="/api/download-all?format=md">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      All as Markdown
+    </a>
+    <a class="download-bar__btn download-bar__btn--html" href="/api/download-all?format=html">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      All as HTML
+    </a>
+    <a class="download-bar__btn download-bar__btn--pdf" href="/api/download-all?format=pdf">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+      All as PDF
+    </a>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

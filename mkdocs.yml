@@ -1,0 +1,128 @@
+site_name: Notes On
+site_description: A collection of notes on various computer science, mathematics, and science concepts
+site_url: ""
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: docker/overrides
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    logo: material/notebook-outline
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - pymdownx.details
+
+extra_css:
+  - docker/overrides/extra.css
+
+nav:
+  - Home: README.md
+  - Programming Languages:
+    - C: notes/c_intro_notes.md
+    - C#: notes/csharp_intro_notes.md
+    - C++: notes/cpp_intro_notes.md
+    - Java: notes/java_intro_notes.md
+    - JavaScript: notes/javascript_intro_notes.md
+    - PHP: notes/php_intro_notes.md
+    - Python: notes/python_intro_notes.md
+    - Ruby: notes/ruby_intro_notes.md
+    - VB.NET: notes/vbnet_intro_notes.md
+    - x64 Assembly: notes/x64_assembly_intro_notes.md
+  - Agentic Programming:
+    - Claude Code and Skills: notes/claude_code.md
+    - LLM Application Engineering: notes/llm_application_engineering.md
+    - Prompt Engineering: notes/prompt_engineering.md
+    - RAG: notes/rag.md
+  - Data Science & Analysis:
+    - HDBSCAN: notes/hdbscan.md
+    - Jupyter: notes/jupyter.md
+    - Matplotlib: notes/matplotlib.md
+    - NumPy: notes/numpy.md
+    - Pandas: notes/pandas.md
+    - SciPy: notes/scipy.md
+    - scikit-learn: notes/scikit_learn.md
+    - UMAP: notes/umap.md
+  - Geospatial:
+    - Folium: notes/folium.md
+    - GeoPandas: notes/geopandas.md
+    - PostGIS: notes/postgis.md
+    - pyinaturalist: notes/pyinaturalist.md
+  - Frameworks & APIs:
+    - Airflow: notes/airflow.md
+    - CUDA: notes/cuda.md
+    - FastAPI: notes/fastapi.md
+    - Flask: notes/flask.md
+    - Gradio: notes/gradio.md
+    - HuggingFace: notes/huggingface.md
+    - HuggingFace Datasets: notes/huggingface_datasets.md
+    - HuggingFace Transformers: notes/huggingface_transformers.md
+    - Keras: notes/keras.md
+    - ML.NET: notes/mlnet.md
+    - MLflow: notes/mlflow.md
+    - OpenCLIP: notes/openclip.md
+    - OpenCV: notes/opencv.md
+    - Pydantic: notes/pydantic.md
+    - PyTorch: notes/pytorch.md
+    - Streamlit: notes/streamlit.md
+    - TensorFlow: notes/tensorflow.md
+  - Databases:
+    - MySQL and MariaDB: notes/mysql_mariadb.md
+    - Oracle Database: notes/oracle.md
+    - PostgreSQL: notes/postgresql.md
+    - SQL Server: notes/sql_server.md
+    - SQLite: notes/sqlite.md
+  - DevOps & Infrastructure:
+    - Bash and Shell Scripting: notes/bash_shell.md
+    - Docker: notes/docker.md
+    - Git: notes/git.md
+    - GitHub: notes/github.md
+    - GitHub Actions: notes/github_actions.md
+    - GitLab: notes/gitlab.md
+    - Grafana: notes/grafana.md
+    - Linux and Unix: notes/linux_unix.md
+    - Windows Administration: notes/windows.md
+  - Audio & Signal Processing:
+    - audiomentations: notes/audiomentations.md
+    - librosa: notes/librosa.md
+    - OpenSoundscape: notes/opensoundscape.md
+    - pydub: notes/pydub.md
+    - sounddevice: notes/sounddevice.md
+    - SoundFile: notes/soundfile.md
+    - torchaudio: notes/torchaudio.md

@@ -1,0 +1,103 @@
+/* Download bar for individual notes */
+.download-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  flex-wrap: wrap;
+}
+
+.download-bar__label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  margin-right: 0.5rem;
+}
+
+.download-bar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.download-bar__btn--md {
+  background: #e8eaf6;
+  color: #3949ab;
+}
+.download-bar__btn--md:hover {
+  background: #c5cae9;
+  color: #283593;
+}
+
+.download-bar__btn--html {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.download-bar__btn--html:hover {
+  background: #c8e6c9;
+  color: #1b5e20;
+}
+
+.download-bar__btn--pdf {
+  background: #fce4ec;
+  color: #c62828;
+}
+.download-bar__btn--pdf:hover {
+  background: #f8bbd0;
+  color: #b71c1c;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .download-bar__btn--md {
+  background: #1a237e33;
+  color: #9fa8da;
+}
+[data-md-color-scheme="slate"] .download-bar__btn--md:hover {
+  background: #1a237e55;
+}
+
+[data-md-color-scheme="slate"] .download-bar__btn--html {
+  background: #1b5e2033;
+  color: #a5d6a7;
+}
+[data-md-color-scheme="slate"] .download-bar__btn--html:hover {
+  background: #1b5e2055;
+}
+
+[data-md-color-scheme="slate"] .download-bar__btn--pdf {
+  background: #b71c1c33;
+  color: #ef9a9a;
+}
+[data-md-color-scheme="slate"] .download-bar__btn--pdf:hover {
+  background: #b71c1c55;
+}
+
+/* Download bundle section on homepage */
+.download-bundle {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.download-bundle h3 {
+  margin-top: 0;
+}
+
+.download-bundle__buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}

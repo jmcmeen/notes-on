@@ -1,0 +1,7 @@
+.git
+.github
+.claude
+site/
+__pycache__
+*.pyc
+.env
